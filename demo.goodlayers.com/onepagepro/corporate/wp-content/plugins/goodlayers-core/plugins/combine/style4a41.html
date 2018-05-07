@@ -1,0 +1,90 @@
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+        
+        <title>GoodLayers | Theme: cryptro</title>
+		
+		<link href="https://demo.goodlayers.com/selector2/styles.css" rel="stylesheet" media="all" />   
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+        var theme_list_open = false;
+        
+        $(document).ready(function () {
+			
+			// drop down
+        	$("#theme_select").click( function () {
+        		if( theme_list_open == true ){
+					$("#theme_ul").fadeOut(200);
+					theme_list_open = false;
+        		}else{
+					$("#theme_ul").fadeIn(200);         		
+					theme_list_open = true;
+        		}
+        		return false;
+        	});
+        	
+        	$("#theme_ul a").click(function () {
+				var theme_data = $(this).attr("data-rel").split(",");
+							
+				$("#command_button .purchase a").attr("href", theme_data[1]);
+				$("#command_button .remove_frame a").attr("href", theme_data[0]);
+				$("#iframe").attr("src", theme_data[0]);
+				
+				$("#theme_select").text($(this).text());
+				$("#theme_ul").hide();
+				theme_list_open = false;
+				return false;
+        	});
+			
+			// resize iframe
+			$("#iframe").attr("height", ($(window).height() - $('#switcher').height()) + 'px');
+        	$(window).resize(function(){
+				$("#iframe").attr("height", ($(window).height() - $('#switcher').height()) + 'px');
+			});			
+
+        });
+        
+        </script>
+         
+</head>
+
+<body>
+
+	<div id="switcher">
+		<div class="inner-switcher">
+			<div id="theme_list">
+				<a href="https://themeforest.net/user/GoodLayers/portfolio?ref=GoodLayers">
+				<img class="switcher-logo" src="https://demo.goodlayers.com/selector2/logo.png" alt="logo" />
+				</a>
+				<a id="theme_select" href="#">
+					Cryptro				</a>
+				<ul id="theme_ul">
+					<li><a href="#" data-rel="https://demo.goodlayers.com/cryptro/,//1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcryptro-cryptocurrency-blockchain-bitcoin-financial-technology-theme%2F21720716%3Flicense%3Dregular%26open_purchase_for_item_id%3D16869357%26purchasable%3Dsource">Cryptro</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/financity/landing,//1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Ffinancity-business-financial-wordpress-theme%2F20757434%3Flicense%3Dregular%26open_purchase_for_item_id%3D16869357%26purchasable%3Dsource">Financity</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/seocrawler/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fseo-crawler-digital-marketing-agency-social-media-seo-wordpress-theme%2F20284297%3Flicense%3Dregular%26open_purchase_for_item_id%3D16869357%26purchasable%3Dsource">Seocrawler</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/onepagepro,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fone-page-pro-multi-purpose-onepage-wordpress-theme%2F19965369%3Flicense%3Dregular%26open_purchase_for_item_id%3D19965369%26purchasable%3Dsource">Onepagepro</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/bigslam,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbig-slam-basketball-wordpress-theme%2F19752828%3Flicense%3Dregular%26open_purchase_for_item_id%3D19752828%26purchasable%3Dsource">Bigslam</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/traveltour/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Ftravel-tour-travel-tour-management-system-wordpress-theme%2F19423474%3Flicense%3Dregular%26open_purchase_for_item_id%3D19423474%26purchasable%3Dsource">Traveltour</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/kleanity/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fkleanity-minimalist-wordpress-theme-creative-portfolio%2F19133384%3Flicense%3Dregular%26open_purchase_for_item_id%3D19133384%26purchasable%3Dsource">Kleanity</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/realfactory/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Freal-factory-factory-industrial-construction-responsive-wordpress-theme%2F17870131%3F%26license%3Dregular%26open_purchase_for_item_id%3D17870131%26purchasable%3Dsource">Realfactory</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/infinite/homepages/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Finfinite-responsive-multipurpose-wordpress-theme%2F16869357%3Flicense%3Dregular%26open_purchase_for_item_id%3D16869357%26purchasable%3Dsource">Infinite</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/newsstand/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fnewsstand-responsive-magazine-editorial-wordpress-theme%2F14721522">Newsstand</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/limoking/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Flimo-king-limousine-transport-car-hire-theme%2F13603599">Limoking</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/greennature,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgreen-nature-environmental-nonprofit-wp-theme%2F13225606">Greennature</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/totalbusiness,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Ftotal-business-multipurpose-business-wp-theme%2F12838026">Totalbusiness</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/finanza,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Ffinanza-business-financial-wordpress-theme%2F12349206">Finanza</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/recibo/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Frecibo-restaurant-food-cook-wordpress-theme%2F12025238">Recibo</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/skinbeauty/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fskin-beauty-beauty-spa-salon-wordpress-theme%2F11531537">Skinbeauty</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/lawyerbase/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Flawyer-base-lawyers-attorneys-wordpress-theme%2F11268639">Lawyerbase</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/hotelmaster/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fhotel-wordpress-theme-hotel-master%2F11032879">Hotelmaster</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/megaproject/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmega-project-construction-company-wp-theme%2F10620770">Megaproject</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/urbanmag,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Furban-mag-news-magazine-wordpress-theme%2F10265679">Urbanmag</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/thekeynote/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe-keynote-conference-event-meeting-wordpress-theme%2F9718856">Thekeynote</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/infospace/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Finfo-space-infographic-wordpress-theme-%2F9522367">Infospace</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/theluxury/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe-luxury-darklight-responsive-wordpress-theme%2F9210438">Theluxury</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/realsoccer/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Freal-soccer-sport-clubs-responsive-wp-theme%2F8888574">Realsoccer</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/clevercourse/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fclever-course-learning-management-system-theme%2F8645312">Clevercourse</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/simplearticle/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fsimple-article-wordpress-theme-for-personal-blog%2F8099933">Simplearticle</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/versatile/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fversatile-responsive-multipurpose-wp-theme%2F7921603">Versatile</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/charityhub/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcharity-hub-charity-nonprofit-fundraising-wp%2F7481543">Charityhub</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/mediso/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmediso-corporate-onepage-blogging-wp-theme%2F7265623">Mediso</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/musicclub/landing,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmusic-club-musicbandclubparty-wordpress-theme%2F7017803">Musicclub</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/flawless,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fflawless-responsive-multipurpose-wp-theme%2F6526764">Flawless</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/tourpackage,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Ftour-package-wordpress-traveltour-theme%2F5360508">Tourpackage</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/ideo,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fideo-minimalistic-wordpress-portfolio-theme%2F5192115">Ideo</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/worldwide,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fworld-wide-responsive-magazine-wp-theme%2F4940421">Worldwide</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/maxima/landing/,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmaxima-retina-ready-wordpress-theme%2F4665137">Maxima</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/realchurch,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Freal-church-responsive-retina-ready-theme%2F4455828">Realchurch</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/kingpower,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fking-power-retina-ready-multipurpose-theme%2F4277136">Kingpower</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/rocketboard,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Frocket-board-metro-wordpress-theme%2F4029455">Rocketboard</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/superspark,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fsuper-spark-responsive-minimal-wp-theme%2F3841189">Superspark</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/architecture,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Farchitecture-wordpress-theme%2F3580702">Architecture</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/bluediamond,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fblue-diamond-responsive-corporate-wp-theme%2F3454881">Bluediamond</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/delicieux,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fdelicieux-restaurant-wordpress-theme%2F3346328">Delicieux</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/theartist,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe-artist-clean-responsive-portfolio-theme%2F3229989">Theartist</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/phoenix,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fphoenix-clean-responsive-wordpress-theme%2F3102249">Phoenix</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/medicalplus,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmedical-plus-responsive-medical-and-health-theme%2F3015457">Medicalplus</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/megazine,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmegazine-responsive-wordpress-theme%2F2941136">Megazine</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/coporlio,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcoporlio-feature-rich-wordpress-theme-%2F2800786">Coporlio</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/incidental,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fincidental-high-class-photography-wp-theme%2F2590298">Incidental</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/greenearth,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgreen-earth-environmental-wordpress-theme%2F2473309">Greenearth</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/goodspace,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgood-space-responsive-minimal-wp-theme%2F2278615">Goodspace</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/thegallery,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fthe-gallery-automatically-generated-gallery-%2F2128369">Thegallery</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/grandcollege,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fgrand-college-wordpress-theme-for-education%2F1865598">Grandcollege</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/bangkokpress,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fbangkok-press-responsive-news-editorial-theme%2F1613446">Bangkokpress</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/slideone,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fslide-one-one-page-parallax-ajax-wp-theme-%2F1470920">Slideone</a></li><li><a href="#" data-rel="https://demo.goodlayers.com/modernize,http://1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmodernize-flexibility-of-wordpress%2F1264247">Modernize</a></li>				</ul>
+				<div class="clear"></div>
+			</div>	
+			<div id="command_button">
+				<div class="purchase" >
+					<a href="//1.envato.market/c/300702/275988/4415?u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fcryptro-cryptocurrency-blockchain-bitcoin-financial-technology-theme%2F21720716%3Flicense%3Dregular%26open_purchase_for_item_id%3D16869357%26purchasable%3Dsource">Purchase</a>
+				</div>		
+				<div class="remove_frame" >
+					<a href="https://demo.goodlayers.com/cryptro/">Remove Frame</a>
+				</div>	
+				<div class="clear"></div>				
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div class="iframe-wrap">
+    <iframe id="iframe" src="https://demo.goodlayers.com/cryptro/" frameborder="0" width="100%"></iframe>
+    </div>
+</body>
+</html>
+
